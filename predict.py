@@ -28,11 +28,7 @@ def app(df):
         drivewheel_fwd = 1;
     else:
         drivewheel_fwd = 0;
-    
-    if (car_company_buick == "Yes"):
-        car_company_buick = 1;
-    else:
-        car_company_buick = 0;
+
 
     # Create a list of all input.
     feature_list = [[car_width, engine_size, horse_power, drivewheel_fwd, car_company_buick]]

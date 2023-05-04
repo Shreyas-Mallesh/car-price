@@ -52,7 +52,7 @@ def load_data():
     df.drop('car_ID', axis=1, inplace=True)
 
     # Create list of final columns.
-    final_col =  ['carwidth', 'enginesize', 'horsepower', 'drivewheel_fwd', 'car_company_buick', 'price']
+    final_col =  ['carwidth', 'enginesize', 'horsepower', 'drivewheel_fwd', 'price']
 
     # Return the processed dataset.
     return df[final_col]
