@@ -21,7 +21,6 @@ def app(df):
 
     # Creat two radio selection for 0 1 input.
     drivewheel_fwd = st.radio("Is if forward drive wheel car?", ("Yes", "No"))
-    car_company_buick = st.radio("Is the car manufactured by Buick?", ("Yes", "No"))
 
     # Modify radio data.
     if (drivewheel_fwd == "Yes"):
@@ -31,19 +30,17 @@ def app(df):
 
 
     # Create a list of all input.
-    feature_list = [[car_width, engine_size, horse_power, drivewheel_fwd, car_company_buick]]
+    feature_list = [[car_width, engine_size, horse_power, drivewheel_fwd]]
     
     # Create a button to predict.
     if st.button("Predict"):
         # Get the all values from predict funciton.
-        score, pred_price, rsquare_score, mae, msle, rmse = predict(df, feature_list)
+        score, pred_price, mae, rmse = predict(df, feature_list)
 
         # Display all the values.
         st.success(f"The predicted price of the car: ${int(pred_price):,}")
         st.info(f"Accuracy score of this model is: {score:.2%}")
-        st.info(f"R-squared score of this model is: {rsquare_score:.2}")
         st.info(f"Mean absolute error of this model is: {mae:.3f}")
-        st.info(f"Mean squared log error of this model is: {msle:.3f}")
         st.info(f"Root mean squared error of this model is: {rmse:.3f}")
 
 @st.cache()

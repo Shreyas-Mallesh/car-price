@@ -1,4 +1,4 @@
-"""This create visulaise data page"""
+"""This create visualise data page"""
 
 # Import necessary module
 import streamlit as st
@@ -10,13 +10,13 @@ def app(df):
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
     # Give title
-    st.title("Visulise Data")
+    st.title("Visualise Data")
 
     # Creat a section for scatter plot
     st.header("Scatterplot")
 
-    # Creat a mulit-select option to get x-axis from the user.
-    feature_list = st.multiselect("Select x-axis values:", ('carwidth', 'enginesize', 'horsepower', 'drivewheel_fwd', 'car_company_buick'))
+    # Creat a multi-select option to get x-axis from the user.
+    feature_list = st.multiselect("Select x-axis values:", ('carwidth', 'enginesize', 'horsepower', 'drivewheel_fwd'))
 
     for feature in feature_list:
         fig = plt.figure(figsize=(12, 5))
