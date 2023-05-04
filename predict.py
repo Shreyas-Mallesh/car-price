@@ -9,7 +9,7 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_log_erro
 
 def app(df):
     # Use markdown to give title
-    st.markdown("<p style='color:red; font-size: 30px'>This app uses <b>Linear regression</b> to predict the price of a car based on your inputs.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='color:red; font-size: 30px'>This app uses <b>Random Forest</b> to predict the price of a car based on your inputs.</p>", unsafe_allow_html=True)
 
     # Create a section for user to input data.
     st.header("Select Values:")
@@ -70,11 +70,9 @@ def predict(df, feature_list):
 
     # Calculate statical data from the model.
     y_test_pred = model.predict(X_test)
-    rsquare_score = r2_score(y_test, y_test_pred)
     mae = mean_absolute_error(y_test, y_test_pred)
-    msle = mean_squared_log_error(y_test, y_test_pred)
     rmse = sqrt(mean_squared_error(y_test, y_test_pred))
 
     # Return the values.
-    return score, pred_price, rsquare_score, mae, msle, rmse
+    return score, pred_price, mae, rmse
 

@@ -8,7 +8,6 @@ import home
 import data
 import plots
 import predict
-import about
 
 # Import other necessary things.
 from prepro import load_data
@@ -27,7 +26,6 @@ pages_dict = {
                 "View Data": data, 
                 "Visualise Data": plots, 
                 "Predict": predict,
-                "About me": about
             }
 
 # Load the dataset.
