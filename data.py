@@ -1,4 +1,4 @@
-"""This create view data page"""
+"""This creates view data page"""
 
 # Import necessary module
 import streamlit as st

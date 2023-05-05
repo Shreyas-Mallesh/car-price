@@ -1,4 +1,4 @@
-"""This module creates the home page."""
+"""This module create the home page."""
 
 # Import necessary modules.
 import streamlit as st
