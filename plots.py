@@ -25,7 +25,7 @@ def app(df):
         st.pyplot(fig)
     
     # Create a section for Visualisation Selector
-    st.header("Visulisation Selector")
+    st.header("Visualisation Selector")
     
     # Create a multiselect option to create plots or charts.
     plot_type = st.multiselect("Select charts or plots:", ('Histogram', 'Box Plot', 'Correlation Heatmap'))
