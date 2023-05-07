@@ -3,6 +3,7 @@
 # Import necessary module
 from math import sqrt
 import streamlit as st
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_log_error, mean_squared_error
@@ -39,8 +40,7 @@ def app(df):
 
         # Display all the values.
         st.success(f"The predicted price of the car: ${int(pred_price):,}")
-        # st.info(f"Accuracy score of this model is: {score:.2%}")
-        st.info(f"Accuracy score of this model is: 89.02%")
+        st.info(f"Accuracy score of this model is: {score:.2%}")
         st.info(f"Mean absolute error of this model is: {mae:.3f}")
         st.info(f"Root mean squared error of this model is: {rmse:.3f}")
 
@@ -54,7 +54,7 @@ def predict(df, feature_list):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
     # Create the regression model
-    model = LinearRegression()
+    model = RandomForestRegressor()
     model.fit(X_train, y_train)
 
     # Store score and predicted price in a variable.

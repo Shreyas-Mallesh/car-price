@@ -1,7 +1,6 @@
 # car-price-prediction
 
 This web app is created to predict the price of cars.<br>
-Website link => https://share.streamlit.io/shishirshekhar/car-price-prediction/main/main.py <br>
 
  Images =>
 
