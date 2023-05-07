@@ -39,9 +39,9 @@ def app(df):
 
         # Display all the values.
         st.success(f"The predicted price of the car: ${int(pred_price):,}")
-        st.info(f"Accuracy score of this model is: {score:.2%}")
-        st.info(f"Mean absolute error of this model is: {mae:.3f}")
-        st.info(f"Root mean squared error of this model is: {rmse:.3f}")
+        # st.info(f"Accuracy score of this model is: {score:.2%}")
+        # st.info(f"Mean absolute error of this model is: {mae:.3f}")
+        # st.info(f"Root mean squared error of this model is: {rmse:.3f}")
 
 @st.cache()
 def predict(df, feature_list):
