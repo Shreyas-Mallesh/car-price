@@ -35,10 +35,15 @@ df = load_data()
 st.sidebar.title("Navigation")
 user_choice = st.sidebar.radio('Go to', ("Home", "View Data", "Visualise Data", "Predict"))
 
+car_make = st.sidebar.selectbox("Car Make",
+                    ("alfa-romero", "audi", "bmw", "chevrolet", "dodge", "honda", "isuzu", "jaguar",
+                     "mazda", "mercedes-benz", "mercury", "mitsubishi", "nissan", "peugot", "plymouth",
+                     "porsche", "renault", "saab", "subaru", "toyota", "volkswagen", "volvo"))
+
 # Open the page selected by the user.
 if (user_choice == "Home" or user_choice == "About me"):
     selected_page = pages_dict[user_choice]
     selected_page.app()
 else:
     selected_page = pages_dict[user_choice]
-    selected_page.app(df)
+    selected_page.app(df, car_make)
