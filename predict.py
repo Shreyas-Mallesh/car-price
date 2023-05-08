@@ -40,7 +40,7 @@ def app(df):
 
         # Display all the values.
         st.success(f"The predicted price of the car: ${int(pred_price):,}")
-        st.info(f"R2 of this model is: 89.02%")
+        st.info(f"R2 score of this model is: 89.02%")
         st.info(f"Mean absolute error of this model is: 2109.212")
         st.info(f"Root mean squared error of this model is: 3066.874")
         # st.info(f"R2 of this model is: {score:.2%}")
