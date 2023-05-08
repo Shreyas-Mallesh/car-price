@@ -36,12 +36,12 @@ def app(df):
 
 
     # Create a list of all input.
-    feature_list = [[car_make, car_width, engine_size, horse_power, drivewheel_fwd]]
+    feature_list = [[car_width, engine_size, horse_power, drivewheel_fwd]]
     
     # Create a button to predict.
     if st.button("Predict"):
         # Get the all values from predict funciton.
-        score, pred_price, mae, rmse = predict(df, feature_list[1:])
+        score, pred_price, mae, rmse = predict(df, feature_list)
 
         # Display all the values.
         st.success(f"The predicted price of the car: ${int(pred_price):,}")
