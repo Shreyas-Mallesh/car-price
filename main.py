@@ -46,4 +46,4 @@ if (user_choice == "Home" or user_choice == "About me"):
     selected_page.app()
 else:
     selected_page = pages_dict[user_choice]
-    selected_page.app(df, car_make)
+    selected_page.app(df)
