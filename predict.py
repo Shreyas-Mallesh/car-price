@@ -14,6 +14,11 @@ def app(df):
 
     # Create a section for user to input data.
     st.header("Select Values:")
+
+    car_make = st.selectbox("Car Make",
+                            ("alfa-romero", "audi", "bmw", "chevrolet", "dodge", "honda", "isuzu", "jaguar",
+                             "mazda", "mercedes-benz", "mercury", "mitsubishi", "nissan", "peugot", "plymouth",
+                             "porsche", "renault", "saab", "subaru", "toyota", "volkswagen", "volvo"))
     
     # Create sliders.
     car_width = st.slider("Car Width", float(df["carwidth"].min()), float(df["carwidth"].max()))
@@ -31,7 +36,7 @@ def app(df):
 
 
     # Create a list of all input.
-    feature_list = [[car_width, engine_size, horse_power, drivewheel_fwd]]
+    feature_list = [[car_make, car_width, engine_size, horse_power, drivewheel_fwd]]
     
     # Create a button to predict.
     if st.button("Predict"):
